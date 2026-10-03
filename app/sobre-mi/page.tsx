@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { Download } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 
 const certs = [
@@ -248,6 +249,14 @@ export default function SobreMiPage() {
             <h2 className="mt-1 font-marker text-3xl md:text-4xl">
               <span className="marker-underline">{isEnglish ? "Certificates" : "Certificados"}</span>
             </h2>
+            <a
+              href="/CV_Luismiguel_Calderon_UXUI.pdf"
+              download
+              className="mt-5 inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 bg-primary-foreground px-5 py-3 text-sm font-bold text-primary transition-transform hover:-translate-y-0.5"
+            >
+              <Download aria-hidden="true" className="size-4" />
+              {isEnglish ? "Download CV" : "Descargar CV"}
+            </a>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
